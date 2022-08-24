@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="icon/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/ASM.css">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url(image/271734000_1005153956738387_6481701295725475987_n.gif) no-repeat center center;
+            height: 800px;
+            background-position: center;
+            padding: 0px;
+            background-size: cover;
+            font-family: sans-serif;
+            margin-top: 40px;
+        }
+
+        .regform {
+            width: 800px;
+            background-color: rgb(0, 0, 0, 0.6);
+            margin: auto;
+            color: #FFFFFF;
+            padding: 10px 0px 10px 0px;
+            text-align: center;
+            border-radius: 15px 15px 0px 0px;
+        }
+
+        .redform {
+            width: 800px;
+            background-color: rgb(0, 0, 0, 0.6);
+            margin: auto;
+            color: #FFFFFF;
+            padding: 10px 0px 10px 0px;
+
+            border-radius: 0px 0px 15px 15px;
+        }
+
+        .main {
+            background-color: rgb(0, 0, 0, 0.5);
+            width: 800px;
+            margin: auto;
+        }
+
+        form {
+            padding: 10px;
+        }
+
+        .name {
+            margin-left: 25px;
+            margin-top: 30px;
+            width: 125px;
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .email {
+            position: relative;
+            left: 200px;
+            top: -37px;
+            line-height: 40px;
+            width: 532px;
+            border-radius: 6px;
+            padding: 0 22px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .Password {
+            position: relative;
+            left: 200px;
+            top: -37px;
+            line-height: 40px;
+            width: 532px;
+            border-radius: 6px;
+            padding: 0 22px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .dangki {
+            color: antiquewhite;
+            font-size: 25px;
+            text-decoration: none;
+            margin: 30px;
+        }
+
+        .dangki:hover {
+            color: #d36837;
+        }
+
+        .quenmatkhau {
+            color: antiquewhite;
+            font-size: 25px;
+            text-decoration: none;
+            float: right;
+            margin-right: 20px;
+        }
+
+        .quenmatkhau:hover {
+            color: #d36837;
+        }
+
+        button {
+
+            background-color: #3BAF9F;
+            display: block;
+            margin: 20px 0px 20px 250px;
+            text-align: center;
+            border-radius: 12px;
+            border: 2px solid #366473;
+            padding: 14px 110px;
+            outline: none;
+            color: while;
+            cursor: pointer;
+            transition: 0.25px;
+        }
+
+        button:hover {
+            background-color: #5390F5;
+        }
+    </style>
+</head>
+
+<body ng-app="dangnhap">
+    <div class="regform">
+        <h1>Xin Chào</h1>
+    </div>
+    <div class="main" ng-controller="myCtr">
+        <form name="form_sv" id="form-sv">
+            <h2 class="name">Email</h2>
+            <input type="email" class="email" name="email" ng-model="sv.email" id="email" autocapitalize="off"
+                required><br>
+            <div style="margin:-30px 0px 0px 200px;" class="text-danger"
+                ng-hide="form_sv.email.$untouched || form_sv.email.$valid">
+                <small ng-show=" form_sv.email.$error.required">Không được để trống
+                </small>
+                <small ng-show="form_sv.email.$error.email">Không đúng định dạng
+                    email </small>
+            </div>
+            <h2 class="name">Mật Khẩu</h2>
+            <input type="password" class="Password" name="password" ng-model="sv.password" id="password" check-password
+                required><br>
+            <div ng-hide="form_sv.password.$untouched || form_sv.password.$valid" class="text-danger"
+                style="margin:-30px 0px 0px 200px;">
+                <small ng-show="form_sv.password.$error.required">
+                    Không được để trống </small>
+                <small ng-show="form_sv.password.$error.check_password">
+                    Độ dài tối thiểu 6 kí tự </small>
+            </div>
+            <button ng-click="dangNhap()">Đăng nhập</button>
+        </form>
+    </div>
+    <div class="redform ">
+        <a href="Dangkis.html" class="dangki"><Strong>Đăng Ký</Strong></a>
+        <a href="QuenMatKhaus.html" class="quenmatkhau"><Strong>Quên Mật Khẩu</Strong></a>
+    </div>
+    <script src="js/angular-route.js"></script>
+    <script src="js/angularjs.min.js"></script>
+    <script>
+        const app = angular.module("dangnhap", []);
+
+        function myController($scope,$http) {
+            $scope.sv = {
+                name: '',
+                birthday: '',
+                email: '',
+                password: '',
+                id: '',
+            };
+            $scope.users = [];
+    const api = 'https://6213a6ea89fad53b1ffc7c6c.mockapi.io/api/dangky';
+    $scope.isLoading = true;
+    $http.get(api) 
+        .then(function (response) {                    
+            $scope.users = response.data;
+        })
+        .catch(function (error) {
+            console.log(error);  
+        });
+        
+        $scope.dangNhap = function(){
+         for (let i = 0; i < $scope.users.length; i++) {
+                var u = $scope.users[i];                
+                if($scope.sv.email == u.email && $scope.sv.password == u.password){                
+                alert('Đăng Nhập thành công');
+                window.location = "Home.html"
+                return;
+            } 
+            if((i+1) == $scope.users.length ){
+                alert('Đăng Nhập Thất Bại')
+            }
+        }
+
+        
+    }
+        }
+        
+
+        app.controller("myCtr", myController);
+        app.directive("checkPassword", function () {
+            return {
+                require: 'ngModel',
+                link: function (scope, element, attr, controller) {
+                    const fnValidate = function (value) {
+                        if (value.length >= 6) {
+                            controller.$setValidity("check_password", true);
+                        } else {
+                            controller.$setValidity("check_password", false);
+                        }
+                        return value;
+                    }
+                    controller.$parsers.push(fnValidate);
+                }
+            };
+        });
+    
+        
+        
+            
+    </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

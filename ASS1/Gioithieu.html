@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asm giai đoạn 1</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="icon/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/ASM.css">
+</head>
+<body>
+     <div class="container">
+        <div class="row navbar navbar-expand-lg navbar-dark mauvien"></div>      
+         <nav class="row navbar navbar-expand-lg navbar-dark bg-light">
+             <div class="container-fluid">
+                  <a href="#"><img src="image/logo asm chuẩn.jpg" alt="" width="70" height="70"></a>
+                 <a href="#" class="navbar-brand text-dark"> <strong>Công Nghệ</strong></a>
+                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="Home.html"><strong class="congcu">Trang Chủ</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="Gioithieu.html"><strong class="congcu">Giới thiệu</strong></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="Lienhe.html"><strong class="congcu">Liên hệ</strong></a>
+                        </li>
+                        <li class="nav-item ">
+                          <a class="nav-link " href="monhoc.html"><strong class="congcu">Môn học</strong></a>
+                      </li>
+                      <li class="nav-item ">
+                        <a class="nav-link " href="Hethong.html"><strong class="congcu">Hệ Thống</strong></a>
+                    </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-secondary " href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <strong class="congcu"><i class="bi bi-person-circle"></i></strong>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item " href="taikhoan.html"><strong class="congcu">Tài Khoản</strong></a></li>
+                                <li><a class="dropdown-item " href="doimatkhau.html"><strong class="congcu">Đổi Mật Khẩu</strong></a></li>
+                                <li><a class="dropdown-item " href="dangnhap.html"><strong class="congcu">Đăng Xuất</strong></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- <button class="btn btn-success " type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Đăng Nhập
+                    </button>
+                    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Đăng Nhập - Mua Sắm</h5>
+                            <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <article class="col-6 col-md-9   pb-3 ">
+                              <div class="container">                   
+                                  <div class="row">                       
+                                      <div class="panel-body">                          
+                                          <form action="" method="">
+                                              <div class="form-group ">
+                                                <div class="mt-2 row">
+                                                  <label class="col-4" for="email">
+                                                      SDT/Email
+                                                      <span class="text-danger">*</span></label>
+                                                  <div class="col-8">
+                                                      <input type="email" name="email" id="email" class="form-control" placeholder="SDT/Email">
+                                                      </div>   
+                                              </div>
+                                                <div class="row  mt-2">
+                                                  <label class="col-4" for="pass">
+                                                    Mật Khẩu
+                                                    <span class="text-danger">*</span></label>
+                                                <div class="col-8">
+                                                    <input type="pass" name="pass" id="pass" class="form-control" placeholder="Mật khẩu">
+                                                    </div> 
+                                                </div>
+                                              </div>
+                                          </form>
+                                      </div>
+                  
+                                  </div>
+                              </div>
+                          </article>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class=" buttondangnhap" data-bs-dismiss="modal"> <Strong class="">Đăng Nhập</Strong></span></button>
+                            <a href="quenmatkhau.html"><button type="button" class="btn btn-primary">Quên Mật Khẩu</button></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <span class="navbar-text p-2 text-secondary"><a href="Dangki.html"><button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        Đăng Kí
+                      </button></a></span> -->
+                </div>
+             </div>
+         </nav>
+         <div >
+            <a href="#"><img src="images/arrow-down.png" alt="" width="100% auto" height="10"></a>
+          </div>
+         <header>
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="images/banner-ourteam.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h2>Hãy Khác Biệt </h2>
+                    <p>Suy Nghĩ Không Cũ Về Vấn Đề Không Mới </p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="3000">
+                    <img src="images/banner-services.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h2>Dân IT</h2>
+                      <p>Phận Trai Gõ Phím Bình Thiên hạ -- Thân Anh Hùng Click Định Giang Sơn</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="3000">
+                    <img src="images/banner-about.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h2>Tình Yêu Là Vĩnh Cửu</h2>
+                      <p>Thứ Duy Nhất Được Phép Thay Đổi Là Người yêu</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="3000">
+                    <img src="images/banner-projects.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h2>Kiên Định</h2>
+                      <p>Nếu Không Có Gì Thay Đổi thì... Hết Hôm Nay Sẽ Đến ngày mai...!</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+         </header>
+          <div class=" row">
+            <div class="col-3"> <a class="nav-link text-danger text-center " href="#"><strong class="mauchu">Giới Thiệu>>Tìm Hiểu:</strong></a></div>
+            <div class="col-9 pt-1"> <a href="#" class="col"><img src="images/breadcum.png" alt="" width="100% auto" height="10"></a></div>
+           </div>
+           <div>
+            
+          <div class="row isotope">
+              <div style="background-color: antiquewhite;height: 800px;">
+                Xin chào mừng các bạn đến với Hệ Cao đẳng thực hành thuộc Trường Đại học FPT,- FPT Polytechnic, hệ thống đào tạo tiên tiến dựa trên sức mạnh của công nghệ thông tin. Hiện tại đã có hàng chục nghìn sinh viên trưởng thành và lập nghiệp theo các chương trình đào tạo của chúng tôi.
+
+                Tại sao lại có nhiều sinh viên theo học với chúng tôi đến vậy?
+                
+                Thứ nhất, với tiêu chí hàng đầu “Thực học – Thực nghiệp”, chúng tôi mong muốn được cùng các sinh viên cùng khởi tạo sự nghiệp tại FPT Polytechnic. Chúng tôi tin tưởng rằng với quyết tâm học tập, dám đổi thay mình bằng cách học tập không ngừng, sinh viên sẽ nhanh chóng thuần thục các kỹ năng thực tế đòi hỏi của công việc và từ đó xây dựng sự nghiệp của mình.
+                
+                Thứ hai, chúng tôi hướng tới việc sử dụng thực tiễn làm bài học theo phương pháp học tập qua dự án (project-based-training). Theo đó, sinh viên sẽ được trao đồ án ngay từ đầu mỗi học kỳ và mỗi bài học thực tế (case-study) sẽ giải quyết các vấn đề đặt ra từ doanh nghiệp. Theo đó, mỗi năm học tập cũng trở thành mỗi năm kinh nghiệm làm việc của sinh viên.
+                
+                Thứ ba, là thành viên của FPT, tập đoàn lớn nhất về Công nghệ thông tin ở Việt Nam, chúng tôi muốn chia sẻ các thành công và kinh nghiệm của mình với các bạn sinh viên.  FPT Polytechnic thực hiện chiến lược “go-mass” (hướng tới đại chúng) nhằm đáp ứng nhu cầu học tập và lập nghiệp của đa số các sinh viên dựa trên việc đào tạo các ngành nghề thiết yếu cho nhu cầu xã hội.
+                
+                Cuối cùng, chúng tôi hy vọng các bạn có thể chia sẻ với chúng tôi mục tiêu “Thực học – Thực nghiệp” vì sự phát triển bền vững của mỗi cá nhân, gia đình và đất nước.
+              </div>
+              <footer class="cuoitrang pt-" >
+                <a href="#"><img src="images/banner-line.png" alt="" width="100% auto" height="80"></a>
+              </footer>
+          </div>
+      </div>
+      
+  
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
